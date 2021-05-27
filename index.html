@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloha</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+  <div id="container" style="width:100%; height:400px;"></div>
+  <script> 
+  document.addEventListener('DOMContentLoaded', function () {
+    const chart = Highcharts.chart('container', {
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: 'Activities'
+        },
+        xAxis: {
+            categories: ['Running', 'Pilates', 'Yoga', 'Hiking']
+        },
+        yAxis: {
+            title: {
+                text: 'Monthly'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [4, 2, 4, 3]
+        }, {
+            name: 'John',
+            data: [1, 2, 3, 5]
+        }]
+    });
+});
+</script>
+</body>
+</html>
